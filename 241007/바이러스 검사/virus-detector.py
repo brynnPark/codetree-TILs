@@ -9,7 +9,8 @@ for i in customers:
     done = i
     done -= leader
     result += 1
-    if not done:
+    #print(done)
+    if done > 0:
         done = done // member +1
         result += done
 
