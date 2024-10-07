@@ -11,7 +11,10 @@ for i in customers:
     result += 1
     #print(done)
     if done > 0:
-        done = done // member +1
+        if not done%member:
+            done = done // member
+        else:
+            done = done // member +1
         result += done
 
 print(result)
