@@ -8,7 +8,9 @@ result = 0
 for i in customers:
     done = i
     done -= leader
-    done = done // member +1
-    result += done + 1
+    result += 1
+    if not done:
+        done = done // member +1
+        result += done
 
 print(result)
