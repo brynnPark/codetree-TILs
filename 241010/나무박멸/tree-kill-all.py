@@ -69,6 +69,8 @@ def remove(k,c):
                             break
                 rq.append((trees,y,x))
     rq.sort(key=lambda x: (x[0], -x[1], -x[2]))
+    if not rq:
+        return
     rtree,ry,rx = rq.pop()
     ans += rtree
     board[ry][rx] = -1000-c
