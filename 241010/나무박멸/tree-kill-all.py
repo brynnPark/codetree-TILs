@@ -68,7 +68,7 @@ def remove(k,c):
                         else:  # 빈칸이나 벽인 경우 중단
                             break
                 rq.append((trees,y,x))
-    rq.sort()
+    rq.sort(key=lambda x: (x[0], -x[1], -x[2]))
     rtree,ry,rx = rq.pop()
     ans += rtree
     board[ry][rx] = -1000-c
